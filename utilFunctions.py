@@ -14,7 +14,7 @@ def getFrameStack(frameQueue):
     return np.stack(frameQueue, axis=0)
 
 def mapDiscreteAction(actionIndex):
-    # maps a discrete action index to a continuous [steering, throttle, brake] vector
+    # maps a discrete action index to a continuous [steer, throttle, brake] vector
     actionMap = {
         0: np.array([0.0, 0.0, 0.0]),   # no action
         1: np.array([0.0, 1.0, 0.0]),   # accelerate forward
@@ -22,4 +22,4 @@ def mapDiscreteAction(actionIndex):
         3: np.array([1.0, 1.0, 0.0]),   # turn right with gas
         4: np.array([0.0, 0.0, 0.8]),   # brake
     }
-    return actionMap.get(actionIndex, np.array([0.0, 0.0, 0.0]))
+    return actionMap.get(actionIndex, np.array([0.0, 0.0, 0.0]))  # fallback to no-op if invalid index
