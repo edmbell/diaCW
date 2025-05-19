@@ -9,8 +9,7 @@ import random
 from datetime import datetime
 import os
 
-# single dqn agent model
-
+# single dqn agent
 class Agent:
     def __init__(self, frameStackNum, actionSpace, learningRate, memorySize, trainingBatchSize, discountFactor,
                  epsilon, epsilonDecay, epsilonMin):
@@ -41,7 +40,6 @@ class Agent:
         self.optimizer = optim.Adam(self.model.parameters(), lr=learningRate, eps=1e-7)
 
         print(f"Agent initialized with {sum(p.numel() for p in self.model.parameters())} parameters.")
-
 
     def createModel(self) -> torch.nn.Module:
         # defines cnn-based deep q-network
@@ -136,7 +134,8 @@ if __name__ == "__main__":
     print(dummyAgent.model)
 
 
-""" # dueling dqn agent model
+"""
+# dueling dqn agent model
 
 class PrioritizedReplayBuffer:
     def __init__(self, capacity, alpha=0.6):
