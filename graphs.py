@@ -7,7 +7,7 @@ import numpy as np
 import os
 import matplotlib.patches as mpatches #custom key colours
 
-def plot_training_reward(log_path="trainLog3.csv"):
+def plot_training_reward(log_path="trainLogIMPROVED.csv"):
     # plot raw and smoothed reward curves from training log
     if not os.path.exists(log_path):
         print(f"Log file not found: {log_path}")
@@ -160,9 +160,9 @@ def plot_training_logs_with_ma50(episode_limit=1000):
 
     # File paths
     LOG_PATHS = [
-        "trainLogO2.csv",       # original
-        "trainLog3.csv",        # improved
-        "trainLog4.csv"         # experimental
+        "trainLogORIGINAL.csv",       # original
+        "trainLogIMPROVED.csv",        # improved
+        "trainLogEXPERIMENTAL.csv"         # experimental
     ]
 
     # Labels
@@ -267,9 +267,9 @@ def plot_training_logs_with_ma250(episode_limit=1000):
 
     # File paths
     LOG_PATHS = [
-        "trainLogO2.csv",       # original
-        "trainLog3.csv",        # improved
-        "trainLog4.csv"         # experimental
+        "trainLogORIGINAL.csv",       # original
+        "trainLogIMPROVED.csv",        # improved
+        "trainLogEXPERIMENTAL.csv"         # experimental
     ]
 
     # Labels
@@ -374,9 +374,9 @@ def plot_high_reward_distribution():
 
     # File paths
     LOG_PATHS = {
-        "Original (Orange)": "trainLogO2.csv",
-        "Improved (Indigo)": "trainLog3.csv",
-        "Experimental (Emerald)": "trainLog4.csv"
+        "Original (Orange)": "trainLogORIGINAL.csv",
+        "Improved (Indigo)": "trainLogIMPROVED.csv",
+        "Experimental (Emerald)": "trainLogEXPERIMENTAL.csv"
     }
 
     # Model-specific bar colors
