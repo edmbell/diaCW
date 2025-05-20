@@ -667,6 +667,6 @@ if __name__ == "__main__":
     #plot_generalization_rewards()              # graph the reward values of a 10 random seed generalization test run
     #model_generalization_comparison()          # choose to plot 3 models preloaded generalisation comparison scores vs each other
     plot_supergroup_comparison()               # preset super generalisation plot
-    #plot_top_supergroup_comparison()      # preset best generalisation plots
+    #plot_top_supergroup_comparison()           # preset best generalisation plots
 
 
